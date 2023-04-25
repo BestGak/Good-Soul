@@ -9,7 +9,7 @@ menuLinks.forEach((item) => item.addEventListener('click' , () =>  document.quer
 $('.gallery__container').slick({
     infinite: false,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     prevArrow: $('.gallery-prev'),
     nextArrow: $('.gallery-next'),
     responsive: [
@@ -23,7 +23,7 @@ $('.gallery__container').slick({
   $('.gallery-video__container').slick({
     infinite: false,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     prevArrow: $('.gallery-video-prev'),
     nextArrow: $('.gallery-video-next'),
     responsive: [

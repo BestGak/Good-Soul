@@ -9,12 +9,12 @@
     font-weight: 500;
 }
 @font-face {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
     src: url(../fonts/Raleway-Regular.ttf);
     font-weight: 400;
 }
 @font-face {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
     src: url(../fonts/Raleway-Medium.ttf);
     font-weight: 500;
 }
@@ -304,18 +304,30 @@ button.slick-disabled svg {
 .gallery__container .slick-track,
 .gallery-video__container .slick-track {
     display: flex;
+    gap: 30px;
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px; */
 }
 .gallery__container .slick-list img,
 .gallery-video-next .slick-list video {
     max-height: 410px;
+    object-fit: cover;
 }
-.gallery__container .slick-list img:not(:last-of-type),
+.slick-list .slick-track:before, .slick-track:after {
+    display: none;
+}
+.gallery__container .slick-list img {
+    /* margin-right: 40px; */
+}
+/* .gallery__container .slick-list img:not(:first-of-type),
 .gallery-video-next video:not(:last-of-type) {
-    margin-right: 40px;
-}
+    margin-left: 40px;
+} */
 video {
-    margin-right: 40px;
+    /* margin-right: 40px; */
     max-height: 410px;
+    object-fit: cover;
 }
 /* faq */
 .question  input {
@@ -390,6 +402,9 @@ video {
 .question input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 40px 60px
+}
+.question input:checked ~ .tab-label::after {
+    transform: rotate(-180deg);
 }
 /* End faq */
 .whyme__container {
