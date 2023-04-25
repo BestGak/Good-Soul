@@ -1,7 +1,9 @@
 // Header menu 
 
 const menuBtn = document.querySelector('.menu-btn');
+const menuLinks = document.querySelectorAll('.menu nav ul li a');
 menuBtn.addEventListener('click' , () => document.querySelector('html').classList.toggle('active'));
+menuLinks.forEach((item) => item.addEventListener('click' , () =>  document.querySelector('html').classList.toggle('active')));
 
 // Slick slider gallery and video gallery
 $('.gallery__container').slick({
